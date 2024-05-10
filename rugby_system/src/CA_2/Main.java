@@ -1,18 +1,17 @@
 package CA_2;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<Person> people = new ArrayList<>();
 
         // Sample menu usage
-        System.out.println("Please enter the filename to read:");
+        System.out.println("Please enter the filename to read: data.txt");
         String filename = scanner.nextLine().trim();
-        RugbyClub.sortDataFromFile(filename);
+        RugbyClub.sortAndDisplayDummyData(filename);
 
         // Menu loop
         boolean exit = false;
@@ -31,13 +30,13 @@ public class Main {
             switch (MenuOption.values()[choice - 1]) {
                 case SORT:
                     // Sorting
-                    RugbyClub.sortDataFromFile(filename);
+                    RugbyClub.sortAndDisplayDummyData(filename);
                     break;
                 case SEARCH:
                     // Searching
                     System.out.println("Please enter the name to search:");
                     String name = scanner.nextLine().trim();
-                    RugbyClub.searchData(people, name);
+                    RugbyClub.searchByName(people, name);
                     break;
                 case ADD_PLAYER:
                     // Adding new player

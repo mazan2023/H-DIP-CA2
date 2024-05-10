@@ -1,9 +1,5 @@
 package CA_2;
 
-import java.io.*;
-import java.util.*;
-
-// Enum for menu options
 enum MenuOption {
     SORT, SEARCH, ADD_PLAYER, GENERATE_RANDOM_PLAYER;
 }
@@ -20,6 +16,7 @@ enum TeamName {
 
 // Person class to represent individuals
 class Person {
+
     String name;
     CoachType coachType;
     TeamName teamName;
